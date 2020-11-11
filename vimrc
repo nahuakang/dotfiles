@@ -159,6 +159,9 @@ cnoreabbrev aG Ack
 cnoreabbrev Ag Ack
 cnoreabbrev AG Ack
 
+" Use rustfmt and autosave
+let g:rustfmt_autosave = 1
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Leader Shortcuts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
