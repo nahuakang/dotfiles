@@ -12,33 +12,36 @@ call plug#begin()
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-Plug 'elzr/vim-json'
-Plug 'fatih/vim-go'
+
+" vim utilities
 Plug 'godlygeek/tabular' " For vim-markdown; must come before
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } 
 Plug 'junegunn/fzf.vim'
-Plug 'mattn/emmet-vim'
 Plug 'mileszs/ack.vim'
 Plug 'morhetz/gruvbox'
-Plug 'pangloss/vim-javascript'
-Plug 'plasticboy/vim-markdown'
 Plug 'preservim/nerdtree'
 Plug 'preservim/tagbar'
-Plug 'python-mode/python-mode'
 Plug 'rking/ag.vim'
-Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-syntastic/syntastic'
 
+" language-related
+Plug 'elzr/vim-json'
+Plug 'fatih/vim-go'
+Plug 'mattn/emmet-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'plasticboy/vim-markdown'
+Plug 'python-mode/python-mode'
+Plug 'rust-lang/rust.vim'
+
 if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
+  Plug 'ncm2/ncm2'
   Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
+  Plug 'ncm2/ncm2-bufword'
+  Plug 'ncm2/ncm2-path'
 endif
 
 " All of your Plugins must be added before the following line
@@ -161,6 +164,15 @@ cnoreabbrev AG Ack
 
 " Use rustfmt and autosave
 let g:rustfmt_autosave = 1
+
+" Enable ncm2 plugins
+if has("nvim")
+  autocmd BufEnter * call ncm2#enable_for_buffer()
+endif
+set completeopt=noinsert,menuone,noselect
+inoremap <expr><Tab> (pumvisible()?(empty(v:completed_item)?"\<C-n>":"\<C-y>"):"\<Tab>")
+inoremap <expr><CR> (pumvisible()?(empty(v:completed_item)?"\<CR>\<CR>":"\<C-y>"):"\<CR>")
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Leader Shortcuts
