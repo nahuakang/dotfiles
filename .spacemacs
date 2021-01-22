@@ -43,7 +43,10 @@ This function should only modify configuration layer settings."
                       auto-completion-enable-sort-by-usage t)
      ;; better-defaults
      (c-c++ :variables
-            c-c++-backend 'lsp-clangd)
+            c-c++-backend 'lsp-clangd
+            c-c++-lsp-enable-semantic-highlight 'rainbow
+            c++-enable-organize-includes-on-save t
+            c-c++enable-clang-format-on-save t)
      (clojure :variables
               clojure-enable-linters 'clj-kondo
               clojure-enable-fancify-symbols t

@@ -29,6 +29,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-syntastic/syntastic'
 
 " language-related
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'rip-rip/clang_complete'
 Plug 'elzr/vim-json'
 Plug 'fatih/vim-go'
 Plug 'mattn/emmet-vim'
@@ -189,7 +191,7 @@ nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>s :mksession<CR>
 
 " Using abbreviation for NERDTree
-nnoremap <leader>ne :NERDTree<CR>
+nnoremap <leader>ne :NERDTreeToggle<CR>
 
 " use fzf.vim
 let mapleader = "\<Space>"
