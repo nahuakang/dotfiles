@@ -22,6 +22,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } 
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
+Plug 'mhinz/vim-startify'
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
 Plug 'preservim/tagbar'
@@ -39,11 +40,6 @@ Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'plasticboy/vim-markdown'
 Plug 'python-mode/python-mode'
-" Plug 'rust-lang/rust.vim'
-
-" if has('nvim')
-"   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" endif
 
 " All of your Plugins must be added before the following line
 call plug#end()              " required
@@ -63,7 +59,7 @@ let g:gruvbox_italic=1
 colorscheme gruvbox
 set background=dark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-set guifont=Monaco:h12
+set guifont=Iosevka:h12
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -88,12 +84,6 @@ set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 set splitbelow          " split window below
 set mouse=a             " Mouse click on navigation
-
-" Open NERDTree by default
-" au VimEnter * NERDTree
-" Use the following to open NERDTree when no file is specified
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Set cursor to line in Insert mode
 " Set up vertical vs block cursor for insert/normal mode
@@ -128,17 +118,25 @@ set path+=** " Include opened directory to Vim's path
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Indentation for different filetypes
 set expandtab
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-autocmd Filetype ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2 textwidth=79 fileformat=unix expandtab commentstring=#\ %s
-autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 textwidth=79 expandtab commentstring=#\ %s
-autocmd FileType go setlocal shiftwidth=4 tabstop=4 softtabstop=4
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 
-" Wrap text
-" set number
-" set textwidth=0
-" set wrapmargin=0
+augroup python
+  autocmd!
+  autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79 expandtab commentstring=#\ %s
+augroup END
+
+augroup go
+  autocmd!
+  autocmd FileType go setlocal tabstop=4 shiftwidth=4 softtabstop=4
+augroup END
+
+augroup cpp
+  autocmd!
+  autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+augroup END
+
 set wrap
 set linebreak
 
