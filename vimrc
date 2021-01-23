@@ -166,7 +166,7 @@ let g:ale_linters = {'c': ['clang'], 'cpp': ['clang', 'g++']}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Leader Shortcuts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" leader is comma
+" => MAPLEADER COMMA
 let mapleader=","
 
 " edit vimrc/zshrc and load vimrc bindings
@@ -180,6 +180,9 @@ nnoremap <leader>s :mksession<CR>
 " Using abbreviation for NERDTree
 nnoremap <leader>ne :NERDTreeToggle<CR>
 
+nnoremap <leader>c :noh<CR>
+
+" => MAPLEADER SPACE
 " use fzf.vim
 let mapleader = "\<Space>"
 nnoremap <silent> <leader><space> :Files<CR>
@@ -189,7 +192,7 @@ set hidden " Enable hidden buffers (don't need to save when switching files)
 nnoremap <leader>vs :vsplit<CR>
 nnoremap <leader>hs :split<CR>
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " move vertically by visual line
