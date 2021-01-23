@@ -24,8 +24,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 Plug 'mhinz/vim-startify'
 Plug 'morhetz/gruvbox'
-" Plug 'sainnhe/gruvbox-material'
-" Plug 'lifepillar/vim-gruvbox8'
 Plug 'preservim/nerdtree'
 Plug 'preservim/tagbar'
 Plug 'rking/ag.vim'
@@ -50,7 +48,6 @@ filetype plugin indent on    " required
 
 " Set to auto read when a file is changed from the outside
 set autoread
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Encoding, Colors and Fonts
@@ -109,13 +106,11 @@ set foldlevelstart=10   " open most folds by default
 set foldnestmax=10      " 10 nested fold max
 set foldmethod=indent   " fold based on indent level
 
-
 """"""""""""""""""""""""""""""
 " => Status line
 """"""""""""""""""""""""""""""
 set laststatus=2 " Status bar
 set path+=** " Include opened directory to Vim's path
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
@@ -209,7 +204,7 @@ nnoremap <C-n> :bnext<CR>
 nnoremap <C-p> :bprevious<CR>
 
 " Open up tagbar with fn + F8 key
-nmap <F8> :TagbarToggle<CR>
+nnoremap <F8> :TagbarToggle<CR>
 
 " space open/closes folds
 nnoremap <space> za
@@ -234,7 +229,6 @@ function EnterTerminal()
     exec "norm! gg"
     exec "startinsert"
 endfunction
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => TMUX Settings
