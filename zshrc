@@ -123,9 +123,6 @@ export -U PATH=$PATH:/home/nahua/.poetry/bin
 # 2020.09.03 Add Rust
 export -U PATH=$PATH:$HOME/.cargo/bin
 
-# 2020.09.16 Add Swift
-export -U PATH=$PATH:/usr/share/swift/usr/bin
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/nahua/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
