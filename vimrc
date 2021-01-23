@@ -185,6 +185,10 @@ let mapleader = "\<Space>"
 nnoremap <silent> <leader><space> :Files<CR>
 set hidden " Enable hidden buffers (don't need to save when switching files) 
 
+" Use space leader to map vertical and horizontal splits
+nnoremap <leader>vs :vsplit<CR>
+nnoremap <leader>hs :split<CR>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
