@@ -23,7 +23,9 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 Plug 'mhinz/vim-startify'
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
+" Plug 'sainnhe/gruvbox-material'
+Plug 'lifepillar/vim-gruvbox8'
 Plug 'preservim/nerdtree'
 Plug 'preservim/tagbar'
 Plug 'rking/ag.vim'
@@ -33,7 +35,7 @@ Plug 'vim-airline/vim-airline'
 
 " language-related
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'bfrg/vim-cpp-modern'
 Plug 'elzr/vim-json'
 Plug 'fatih/vim-go'
 Plug 'mattn/emmet-vim'
@@ -54,9 +56,11 @@ set autoread
 " => Encoding, Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color theme and font
-" colorscheme molokai
+if has('termguicolors')
+  set termguicolors
+endif
 let g:gruvbox_italic=1
-colorscheme gruvbox
+colorscheme gruvbox8
 set background=dark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set guifont=Iosevka:h12
