@@ -125,6 +125,8 @@ set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+set textwidth=120
+set colorcolumn=120
 
 augroup python
   autocmd!
@@ -138,7 +140,7 @@ augroup END
 
 augroup cpp
   autocmd!
-  autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+  autocmd FileType cpp setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 augroup END
 
 set wrap
