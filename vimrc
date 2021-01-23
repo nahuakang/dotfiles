@@ -23,9 +23,9 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 Plug 'mhinz/vim-startify'
-" Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
 " Plug 'sainnhe/gruvbox-material'
-Plug 'lifepillar/vim-gruvbox8'
+" Plug 'lifepillar/vim-gruvbox8'
 Plug 'preservim/nerdtree'
 Plug 'preservim/tagbar'
 Plug 'rking/ag.vim'
@@ -60,7 +60,7 @@ if has('termguicolors')
   set termguicolors
 endif
 let g:gruvbox_italic=1
-colorscheme gruvbox8
+colorscheme gruvbox
 set background=dark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set guifont=Iosevka:h12
@@ -163,8 +163,8 @@ cnoreabbrev aG Ack
 cnoreabbrev Ag Ack
 cnoreabbrev AG Ack
 
-" Use rustfmt and autosave
-let g:rustfmt_autosave = 1
+" Ale C/C++ Linter
+let g:ale_linters = {'c': ['clang'], 'cpp': ['clang', 'g++']}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Leader Shortcuts
