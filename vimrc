@@ -1,6 +1,7 @@
 " My .vimrc
 " Turn on syntax highlighting
 syntax on
+source ~/dotfile/coc.nvim
 
 " Use Vim-Plug
 set nocompatible              " be iMproved, required
@@ -14,6 +15,8 @@ call plug#begin()
 " plugin on GitHub repo
 
 " vim utilities
+Plug 'airblade/vim-rooter'
+Plug 'dense-analysis/ale'
 Plug 'godlygeek/tabular' " For vim-markdown; must come before
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } 
@@ -26,28 +29,25 @@ Plug 'rking/ag.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-syntastic/syntastic'
 
 " language-related
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'rip-rip/clang_complete'
 Plug 'elzr/vim-json'
 Plug 'fatih/vim-go'
 Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'plasticboy/vim-markdown'
 Plug 'python-mode/python-mode'
-Plug 'rust-lang/rust.vim'
+" Plug 'rust-lang/rust.vim'
 
-if has('nvim')
-  Plug 'ncm2/ncm2'
-  Plug 'roxma/nvim-yarp'
-  Plug 'ncm2/ncm2-bufword'
-  Plug 'ncm2/ncm2-path'
-endif
+" if has('nvim')
+"   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" endif
 
 " All of your Plugins must be added before the following line
 call plug#end()              " required
+
 filetype plugin indent on    " required
 
 " Set to auto read when a file is changed from the outside
@@ -87,6 +87,7 @@ set lazyredraw          " Redraw only when we need to.
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 set splitbelow          " split window below
+set mouse=a             " Mouse click on navigation
 
 " Open NERDTree by default
 " au VimEnter * NERDTree
@@ -141,13 +142,9 @@ autocmd FileType go setlocal shiftwidth=4 tabstop=4 softtabstop=4
 set wrap
 set linebreak
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin configurations 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Enable Deoplete autocomplete on startup
-let g:deoplete#enable_at_startup = 1
-
 " Enable Vim Emmet only for HTML/CSS
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,scss,eruby,javascriptreact,less,htmldjango EmmetInstall
@@ -166,15 +163,6 @@ cnoreabbrev AG Ack
 
 " Use rustfmt and autosave
 let g:rustfmt_autosave = 1
-
-" Enable ncm2 plugins
-if has("nvim")
-  autocmd BufEnter * call ncm2#enable_for_buffer()
-endif
-set completeopt=noinsert,menuone,noselect
-inoremap <expr><Tab> (pumvisible()?(empty(v:completed_item)?"\<C-n>":"\<C-y>"):"\<Tab>")
-inoremap <expr><CR> (pumvisible()?(empty(v:completed_item)?"\<CR>\<CR>":"\<C-y>"):"\<CR>")
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Leader Shortcuts
@@ -224,6 +212,12 @@ nnoremap <space> za
 
 " esc in insert mode
 inoremap jk <Esc>
+
+" tab and enter behavior on suggestion
+inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<CR>"
+inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
+inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Down>"
+inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<Up>"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => TERMINAL Settings
