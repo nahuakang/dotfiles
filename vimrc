@@ -60,7 +60,7 @@ let g:gruvbox_italic=1
 colorscheme gruvbox
 set background=dark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-set guifont=Iosevka:h12
+set guifont=Fira\Code:h12
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -220,10 +220,8 @@ nnoremap <space> za
 inoremap jk <Esc>
 
 " tab and enter behavior on suggestion
-inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<CR>"
-inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
-inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Down>"
-inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<Up>"
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => TERMINAL Settings
