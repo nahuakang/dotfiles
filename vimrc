@@ -38,6 +38,8 @@ Plug 'elzr/vim-json'
 Plug 'fatih/vim-go'
 Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'plasticboy/vim-markdown'
 Plug 'python-mode/python-mode'
 
@@ -161,7 +163,11 @@ cnoreabbrev Ag Ack
 cnoreabbrev AG Ack
 
 " Ale C/C++ Linter
-let g:ale_linters = {'c': ['clang'], 'cpp': ['clang', 'g++']}
+let g:ale_linters = {
+  \ 'c': ['clang'],
+  \ 'cpp': ['clang', 'g++'],
+  \ 'javascript': ['eslint'],
+  \}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Leader Shortcuts
