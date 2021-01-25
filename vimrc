@@ -15,20 +15,20 @@ call plug#begin()
 " plugin on GitHub repo
 
 " vim utilities
-Plug 'airblade/vim-rooter'
-Plug 'dense-analysis/ale'
+Plug 'airblade/vim-rooter' " changes the working directory to the project root
+Plug 'dense-analysis/ale' " Syntax checking and semantic errors
 Plug 'godlygeek/tabular' " For vim-markdown; must come before
-Plug 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs' " Insert or delete brackets, parens, quotes in pair
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } 
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 Plug 'mhinz/vim-startify'
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
-Plug 'preservim/tagbar'
+Plug 'preservim/tagbar' " Browse the tags of the current file
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive' " The premier Vim plugin for Git
 Plug 'vim-airline/vim-airline'
 
 " language-related
