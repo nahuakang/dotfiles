@@ -1,7 +1,7 @@
 " My .vimrc
 " Turn on syntax highlighting
 syntax on
-source ~/dotfile/coc.nvim
+source ~/dotfiles/coc.nvim
 
 " Use Vim-Plug
 set nocompatible              " be iMproved, required
