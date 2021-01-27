@@ -87,6 +87,7 @@ set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 set splitbelow          " split window below
 set mouse=a             " Mouse click on navigation
+set clipboard+=unnamedplus
 
 " Set cursor to line in Insert mode
 " Set up vertical vs block cursor for insert/normal mode
