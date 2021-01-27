@@ -65,6 +65,7 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set guifont=Fira\Code:h12
 
 " Set utf8 as standard encoding and en_US as the standard language
+set ma
 set encoding=utf8
 set fileencoding=utf-8
 set fileencodings=utf-8
