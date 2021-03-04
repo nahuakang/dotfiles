@@ -16,6 +16,7 @@ call plug#begin()
 
 " vim utilities
 Plug 'airblade/vim-rooter' " changes the working directory to the project root
+Plug 'airblade/vim-gitgutter'
 Plug 'dense-analysis/ale' " Syntax checking and semantic errors
 Plug 'godlygeek/tabular' " For vim-markdown; must come before
 Plug 'jiangmiao/auto-pairs' " Insert or delete brackets, parens, quotes in pair
