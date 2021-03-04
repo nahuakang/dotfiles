@@ -34,6 +34,7 @@ Plug 'vim-airline/vim-airline'
 " language-related
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'bfrg/vim-cpp-modern'
+Plug 'cespare/vim-toml'
 Plug 'elzr/vim-json'
 Plug 'fatih/vim-go'
 Plug 'mattn/emmet-vim'
