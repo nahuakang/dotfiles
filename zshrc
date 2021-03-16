@@ -102,40 +102,39 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Add fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # 2020.05.29 Add Golang
 export -U PATH=$PATH:/usr/local/go/bin   
-export -U PATH=$PATH:/home/nahua/go/bin
 
 # 2020.07.26 Add NVM
-export -U NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export -U NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# # 2020.02.08 Add NPM
-export PATH=~/.npm-global/bin:$PATH
-
-# 2020.12.01 Add Flutter SDK
-export -U PATH=$PATH:/snap/flutter/bin
-
-# 2020.11.08 Add Python-Poetry
-export -U PATH=$PATH:/home/nahua/.poetry/bin
+# 2020.02.08 Add NPM
+# export PATH=~/.npm-global/bin:$PATH
 
 # 2020.09.03 Add Rust
 export -U PATH=$PATH:$HOME/.cargo/bin
 
-# >>> conda initialize >>>
+# added by Anaconda3 2019.10 installer
+# >>> conda init >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/nahua/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/Users/nahua/opt/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
 if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
+    \eval "$__conda_setup"
 else
-    if [ -f "/home/nahua/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/nahua/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/nahua/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/nahua/opt/anaconda3/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
     else
-        export PATH="/home/nahua/anaconda3/bin:$PATH"
+        \export PATH="/Users/nahua/opt/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
-# <<< conda initialize <<<
+# <<< conda init <<<
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/usr/local/sbin:$PATH"
+
