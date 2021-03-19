@@ -119,6 +119,9 @@ export -U PATH=$PATH:/usr/local/go/bin
 # 2020.09.03 Add Rust
 export -U PATH=$PATH:$HOME/.cargo/bin
 
+# 2021.03.18 Add Flutter
+export -U PATH=$PATH:/usr/local/flutter/bin/
+
 # added by Anaconda3 2019.10 installer
 # >>> conda init >>>
 # !! Contents within this block are managed by 'conda init' !!
