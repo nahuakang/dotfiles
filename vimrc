@@ -30,6 +30,7 @@ Plug 'rking/ag.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive' " The premier Vim plugin for Git
 Plug 'vim-airline/vim-airline'
+Plug 'Yggdroot/indentLine' " Indentation lines
 
 " language-related
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
