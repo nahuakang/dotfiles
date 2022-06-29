@@ -31,6 +31,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive' " The premier Vim plugin for Git
 Plug 'vim-airline/vim-airline'
 Plug 'Yggdroot/indentLine' " Indentation lines
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
 " language-related
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -91,6 +92,7 @@ set hlsearch            " highlight matches
 set splitbelow          " split window below
 set mouse=a             " Mouse click on navigation
 set clipboard+=unnamedplus
+set ignorecase
 
 " Set cursor to line in Insert mode
 " Set up vertical vs block cursor for insert/normal mode
