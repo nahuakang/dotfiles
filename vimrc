@@ -62,6 +62,8 @@ if has('termguicolors')
   set termguicolors
 endif
 let g:gruvbox_italic=1
+let g:gruvbox_bold=1
+let g:gruvbox_contrast_dark="medium"
 colorscheme gruvbox
 set background=dark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
