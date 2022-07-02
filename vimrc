@@ -206,6 +206,9 @@ set hidden " Enable hidden buffers (don't need to save when switching files)
 nnoremap <leader>vs :vsplit<CR>
 nnoremap <leader>hs :split<CR>
 
+" Use space leader to open a new tab
+nnoremap <leader>t :tabnew<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -223,6 +226,10 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 " Toggle to next buffer (:bnext) and previous buffer (:bprevious)
 nnoremap <C-n> :bnext<CR>
 nnoremap <C-p> :bprevious<CR>
+
+" Toggle between tabs
+nnoremap <C-j> :tabprevious<CR>
+nnoremap <C-k> :tabnext<CR>
 
 " Open up tagbar with fn + F8 key
 nnoremap <F8> :TagbarToggle<CR>
