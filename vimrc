@@ -143,6 +143,11 @@ augroup go
   autocmd FileType go setlocal tabstop=4 shiftwidth=4 softtabstop=4
 augroup END
 
+augroup rust
+  autocmd!
+  autocmd FileType rust set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+augroup END
+
 augroup cpp
   autocmd!
   autocmd FileType cpp setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
