@@ -18,10 +18,12 @@ call plug#begin()
 Plug 'airblade/vim-rooter' " changes the working directory to the project root
 Plug 'dense-analysis/ale' " Syntax checking and semantic errors
 Plug 'godlygeek/tabular' " For vim-markdown; must come before
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'jiangmiao/auto-pairs' " Insert or delete brackets, parens, quotes in pair
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } 
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
+Plug 'mhinz/vim-signify'
 Plug 'mhinz/vim-startify'
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
@@ -31,7 +33,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive' " The premier Vim plugin for Git
 Plug 'vim-airline/vim-airline'
 Plug 'Yggdroot/indentLine' " Indentation lines
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
 " language-related
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -162,6 +163,9 @@ set linebreak
 " Enable Vim Emmet only for HTML/CSS
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,scss,eruby,javascriptreact,less,htmldjango EmmetInstall
+
+" vim-signify default updatetime 4000ms is not good for async update
+set updatetime=100
 
 " Turn on python-mode autocompletion mode
 let g:pymode_rope = 1
