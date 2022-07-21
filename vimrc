@@ -25,7 +25,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 Plug 'mhinz/vim-signify'
 Plug 'mhinz/vim-startify'
-Plug 'morhetz/gruvbox'
+Plug 'lifepillar/vim-gruvbox8'
 Plug 'preservim/nerdtree'
 Plug 'preservim/tagbar' " Browse the tags of the current file
 Plug 'rking/ag.vim'
@@ -46,6 +46,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'plasticboy/vim-markdown'
 Plug 'python-mode/python-mode'
+Plug 'ziglang/zig.vim'
 
 " All of your Plugins must be added before the following line
 call plug#end()              " required
@@ -62,10 +63,10 @@ set autoread
 if has('termguicolors')
   set termguicolors
 endif
-let g:gruvbox_italic=1
-let g:gruvbox_bold=1
-let g:gruvbox_contrast_dark="medium"
-colorscheme gruvbox
+" let g:gruvbox_italic=1
+" let g:gruvbox_bold=1
+" let g:gruvbox_contrast_dark="medium"
+colorscheme gruvbox8
 set background=dark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set guifont=Fira\Code:h12
