@@ -15,6 +15,7 @@ call plug#begin()
 " plugin on GitHub repo
 
 " vim utilities
+Plug 'arcticicestudio/nord-vim'
 Plug 'airblade/vim-rooter' " changes the working directory to the project root
 Plug 'dense-analysis/ale' " Syntax checking and semantic errors
 Plug 'godlygeek/tabular' " For vim-markdown; must come before
@@ -66,6 +67,7 @@ endif
 " let g:gruvbox_italic=1
 " let g:gruvbox_bold=1
 " let g:gruvbox_contrast_dark="medium"
+" colorscheme nord
 colorscheme gruvbox8
 set background=dark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
