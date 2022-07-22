@@ -114,13 +114,13 @@ window:
 # Font configuration
 font:
   normal:
-    family: MesloLGS NF
+    family: FiraCode NF #MesloLGS NF
     style: Regular
   bold:
-    family: MesloLGS NF
+    family: FiraCode NF #MesloLGS NF
     style: Bold
   italic:
-    family: MesloLGS NF
+    family: FiraCode NF #MesloLGS NF
     style: Italic
   size: 16.0
 #font:
