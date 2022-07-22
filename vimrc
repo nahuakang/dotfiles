@@ -67,8 +67,8 @@ endif
 " let g:gruvbox_italic=1
 " let g:gruvbox_bold=1
 " let g:gruvbox_contrast_dark="medium"
-" colorscheme nord
-colorscheme gruvbox8
+colorscheme nord
+" colorscheme gruvbox8
 set background=dark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set guifont=Fira\Code:h12
