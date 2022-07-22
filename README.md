@@ -1,4 +1,24 @@
-# dotfile
+# Dotfiles
+
+## Meta
+Terminal: [Alacritty](https://github.com/alacritty/alacritty)
+
+Prompt: [Starship](https://starship.rs/)
+
+Shell: `zsh` + `oh-my-zsh` for plugin management
+
+## Tools
+[Reference 1](https://mahmoudashraf.dev/blog/my-terminal-became-more-rusty/)
+
+[Reference 2](https://kbknapp.dev/shell-setup/)
+
+[git-delta](https://github.com/dandavison/delta)
+
+[exa](https://github.com/ogham/exa)
+
+[custom starship commands](https://github.com/starship/starship/discussions/1252)
+
+## dotfile
 
 Currently this repository contains only my `vimrc` file.
 
