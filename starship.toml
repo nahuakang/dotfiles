@@ -1,0 +1,118 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](#8FBCBB)\
+$username\
+$directory\
+$git_branch\
+$git_status\
+$c\
+$golang\
+$haskell\
+$julia\
+$nodejs\
+$nim\
+$python\
+$rust\
+$time\
+[](#3B4252)
+$character
+"""
+
+[username]
+show_always = true
+style_user = "fg:#2E3440 bg:#8FBCBB"
+style_root = "fg:#2E3440 bg:#8FBCBB"
+format = '[$user ]($style)'
+
+[directory]
+read_only = " "
+style = "fg:#ECEFF4 bg:#3B4252"
+format = "[ $path ]($style)"
+home_symbol = "ﮟ ~"
+truncation_length = 3
+truncate_to_repo = false
+truncation_symbol = "…/"
+fish_style_pwd_dir_length = 1
+
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+"oss" = " "
+"projects" = " "
+
+[character]
+success_symbol = " [λ](bold green)"
+error_symbol = " [λ](bold red)"
+
+[aws]
+# symbol = " "
+format = 'on [$symbol($profile )(\($region\) )]($style)'
+style = "bold blue"
+symbol = "🅰 "
+
+[c]
+symbol = " "
+style = "bg:#5E81AC"
+format = '[[ $symbol ($version) ](bg:#5E81AC)]($style)'
+
+[conda]
+symbol = " "
+
+[docker_context]
+symbol = " "
+style = "bg:#06969A"
+format = '[[ $symbol $context ](bg:#06969A)]($style) $path'
+
+[git_branch]
+symbol = ""
+style = "fg:#ECEFF4 bg:#4C566A"
+format = '[[ $symbol $branch ](fg:#ECEFF4 bg:#4C566A)]($style)'
+
+[git_status]
+style = "fg:#ECEFF4 bg:#4C566A"
+format = '[[($all_status$ahead_behind )](fg:#ECEFF4 bg:#4C566A)]($style)'
+
+[golang]
+symbol = " "
+style = "bg:#5E81AC"
+format = '[[ $symbol ($version) ](bg:#5E81AC)]($style)'
+
+[haskell]
+symbol = " "
+style = "bg:#5E81AC"
+format = '[[ $symbol ($version) ](bg:#5E81AC)]($style)'
+
+[julia]
+symbol = " "
+style = "bg:#5E81AC"
+format = '[[ $symbol ($version) ](bg:#5E81AC)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#5E81AC"
+format = '[[ $symbol ($version) ](bg:#5E81AC)]($style)'
+
+[nim]
+symbol = " "
+style = "bg:#5E81AC"
+format = '[[ $symbol ($version) ](bg:#5E81AC)]($style)'
+
+[python]
+symbol = " "
+style = "bg:#5E81AC"
+format = '[[ $symbol ($version) ](bg:#5E81AC)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#5E81AC"
+format = '[[ $symbol ($version) ](bg:#5E81AC)]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "fg:#ECEFF4 bg:#3B4252"
+format = '[[  $time ](bg:#3B4252)]($style)'
