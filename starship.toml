@@ -15,8 +15,7 @@ $nodejs\
 $nim\
 $python\
 $rust\
-$time\
-[](#3B4252)
+$time
 $character
 """
 
@@ -43,6 +42,10 @@ fish_style_pwd_dir_length = 1
 "Pictures" = " "
 "oss" = " "
 "projects" = " "
+
+[fill]
+symbol = "•"
+style = "dimmed #D8DEE9"
 
 [character]
 success_symbol = " [λ](bold green)"
