@@ -22,6 +22,8 @@ import:
 # check the local terminfo database and use `alacritty` if it is
 # available, otherwise `xterm-256color` is used.
 #TERM: alacritty
+env:
+  TERM: alacritty
 
 window:
   padding:
@@ -114,13 +116,13 @@ window:
 # Font configuration
 font:
   normal:
-    family: FiraCode NF #MesloLGS NF
+    family: FiraCode Nerd Font #MesloLGS NF
     style: Regular
   bold:
-    family: FiraCode NF #MesloLGS NF
+    family: FiraCode Nerd Font #MesloLGS NF
     style: Bold
   italic:
-    family: FiraCode NF #MesloLGS NF
+    family: FiraCode NerdFont #MesloLGS NF
     style: Italic
   size: 16.0
 #font:
@@ -483,7 +485,6 @@ shell:
     - -l
     - -c
     - "tmux attach || tmux"
-
 # Startup directory
 #
 # Directory the shell is started in. If this is unset, or `None`, the working
