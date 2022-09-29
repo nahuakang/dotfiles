@@ -15,15 +15,20 @@ call plug#begin()
 " plugin on GitHub repo
 
 " vim utilities
+Plug 'arcticicestudio/nord-vim'
 Plug 'airblade/vim-rooter' " changes the working directory to the project root
 Plug 'dense-analysis/ale' " Syntax checking and semantic errors
 Plug 'godlygeek/tabular' " For vim-markdown; must come before
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'jiangmiao/auto-pairs' " Insert or delete brackets, parens, quotes in pair
+Plug 'jremmen/vim-ripgrep' " Try RipGrep
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } 
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
+Plug 'mhinz/vim-signify'
 Plug 'mhinz/vim-startify'
-Plug 'morhetz/gruvbox'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'lifepillar/vim-gruvbox8'
 Plug 'preservim/nerdtree'
 Plug 'preservim/tagbar' " Browse the tags of the current file
 Plug 'rking/ag.vim'
@@ -31,7 +36,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive' " The premier Vim plugin for Git
 Plug 'vim-airline/vim-airline'
 Plug 'Yggdroot/indentLine' " Indentation lines
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
 " language-related
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -45,6 +49,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'plasticboy/vim-markdown'
 Plug 'python-mode/python-mode'
+Plug 'ziglang/zig.vim'
 
 " All of your Plugins must be added before the following line
 call plug#end()              " required
@@ -61,13 +66,11 @@ set autoread
 if has('termguicolors')
   set termguicolors
 endif
-let g:gruvbox_italic=1
-let g:gruvbox_bold=1
-let g:gruvbox_contrast_dark="medium"
-colorscheme gruvbox
+
+colorscheme nord
 set background=dark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-set guifont=Fira\Code:h12
+set guifont=FiraCode\ NF:h16
 
 " Set utf8 as standard encoding and en_US as the standard language
 set ma
@@ -138,19 +141,9 @@ augroup python
   autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79 expandtab commentstring=#\ %s
 augroup END
 
-augroup go
-  autocmd!
-  autocmd FileType go setlocal tabstop=4 shiftwidth=4 softtabstop=4
-augroup END
-
 augroup rust
   autocmd!
   autocmd FileType rust set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
-augroup END
-
-augroup cpp
-  autocmd!
-  autocmd FileType cpp setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 augroup END
 
 set wrap
@@ -163,17 +156,10 @@ set linebreak
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,scss,eruby,javascriptreact,less,htmldjango EmmetInstall
 
-" Turn on python-mode autocompletion mode
-let g:pymode_rope = 1
-let g:pymode_rope_completion = 1
-let g:pymode_lint = 1
+" vim-signify default updatetime 4000ms is not good for async update
+set updatetime=100
 
-" Using ack.vim for Ag
-let g:ackprg = 'ag --vimgrep --smart-case'
-cnoreabbrev ag Ack
-cnoreabbrev aG Ack
-cnoreabbrev Ag Ack
-cnoreabbrev AG Ack
+cnoreabbrev rg Rg
 
 " Ale C/C++ Linter
 let g:ale_linters = {
@@ -244,10 +230,6 @@ nnoremap <space> za
 
 " esc in insert mode
 inoremap jk <Esc>
-
-" tab and enter behavior on suggestion
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => TERMINAL Settings

@@ -1,0 +1,24 @@
+# theme = "gruvbox"
+theme = "nord"
+
+[editor]
+line-number = "absolute"
+mouse = false
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+# At most one section each of 'keys.normal', 'keys.insert' and 'keys.select'
+[keys.normal]
+C-o = ":open ~/.config/helix/config.toml" # Maps the Control-o to opening of the helix config file
+g = { a = "code_action" } # Maps `ga` to show possible code actions
+# "ret" = ["open_below", "normal_mode"] # Maps the enter key to open_below then re-enter normal mode
+"ret" = ["move_line_down", "goto_first_nonwhitespace"] # Maps the enter key to move to start of next line
+
+[keys.insert]
+j = { k = "normal_mode" } # Maps `jk` to exit insert mode
