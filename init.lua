@@ -17,6 +17,7 @@ require "paq" {
   'mhinz/vim-signify';
   'mhinz/vim-startify';
   'nvim-treesitter/nvim-treesitter';
+  'numToStr/FTerm.nvim';
   'lifepillar/vim-gruvbox8';
   'preservim/nerdtree';
   'preservim/tagbar';
@@ -135,4 +136,8 @@ vim.keymap.set('i', 'jk', '<Esc>')
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
 vim.api.nvim_create_user_command('Vterm', ':vsp term://zsh', {})
 vim.api.nvim_create_user_command('Hterm', ':sp term://zsh', {})
+
+-- FTerm Settings
+vim.keymap.set('n', '<C-e>', '<CMD>lua require("FTerm").toggle()<CR>')
+vim.keymap.set('t', '<C-e>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
 
