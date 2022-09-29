@@ -19,6 +19,8 @@ require "paq" {
   'nvim-treesitter/nvim-treesitter';
   'numToStr/FTerm.nvim';
   'lifepillar/vim-gruvbox8';
+  'kyazdani42/nvim-web-devicons';
+  'kyazdani42/nvim-tree.lua';
   'preservim/nerdtree';
   'preservim/tagbar';
   'rking/ag.vim';
@@ -65,6 +67,11 @@ vim.opt.mouse = 'a'
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.ignorecase = true
 
+-- NvimTree
+vim.g.loaded = 1
+vim.g.loaded_netrwPlugin = 1
+require("nvim-tree").setup()
+
 -- VIM FOLDING
 vim.opt.foldenable = true
 vim.opt.foldlevelstart = 10
@@ -97,7 +104,7 @@ vim.keymap.set('n', '<Leader>ev', ':vsp $MYVIMRC<CR>')    -- Vertically split an
 vim.keymap.set('n', '<Leader>vsp', ':vsp ~/.zshrc<CR>')   -- Source .zshrc
 vim.keymap.set('n', '<Leader>sv', ':source $MYVIMRC<CR>') -- Source $MYVIMRC
 vim.keymap.set('n', '<Leader>s', ':mksession<CR>')        -- Saving current session
-vim.keymap.set('n', '<Leader>ne', ':NERDTreeToggle<CR>')  -- Toggle NERDTree
+vim.keymap.set('n', '<Leader>nt', ':NvimTreeToggle<CR>')  -- Toggle NvimTree
 vim.keymap.set('n', '<Leader>c', ':noh<CR>')              -- Clear search highlighting
 
 -- Enable hidden buffers (do not need to save when switching from unsaved files)
@@ -117,8 +124,6 @@ vim.keymap.set('v', 'k', 'gk')
 -- move to beginning/end of line
 vim.keymap.set('n', 'B', '^')
 vim.keymap.set('n', 'E', '$')
--- Open NERDTree with Ctrl + t
-vim.keymap.set('n', '<C-t>', ':NERDTreeToggle<CR>')
 -- Toggle to next and previous buffers
 vim.keymap.set('n', '<C-n>', ':bnext<CR>')
 vim.keymap.set('n', '<C-p>', ':bprevious<CR>')
