@@ -39,7 +39,10 @@ vim.keymap.set('n', '<Space>', 'za')
 -- Escape from insert mode
 vim.keymap.set('i', 'jk', '<Esc>')
 
--- LSP Navigation & Code Actions
+-----------------------------------
+-- LSP Navigation & Code Actions --
+-----------------------------------
+
 -- See `:help vim.lsp.*` for documentation on any of the below functions
 local bufopts = { noremap=true, silent=true, buffer=bufnr }
 vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
@@ -57,6 +60,22 @@ vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
 vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
 vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
 vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
+
+-------------------------------
+-- Vimspector Debugging Keys --
+-------------------------------
+
+vim.cmd([[
+nmap <F9> <cmd>call vimspector#Launch()<cr>
+nmap <F5> <cmd>call vimspector#StepOver()<cr>
+nmap <F8> <cmd>call vimspector#Reset()<cr>
+nmap <F11> <cmd>call vimspector#StepOver()<cr>")
+nmap <F12> <cmd>call vimspector#StepOut()<cr>")
+nmap <F10> <cmd>call vimspector#StepInto()<cr>")
+]])
+vim.keymap.set('n', "Db", ":call vimspector#ToggleBreakpoint()<cr>")
+vim.keymap.set('n', "Dw", ":call vimspector#AddWatch()<cr>")
+vim.keymap.set('n', "De", ":call vimspector#Evaluate()<cr>")
 
 -- TERMINAL COMMANDS
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')

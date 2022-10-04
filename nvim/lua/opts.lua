@@ -1,11 +1,17 @@
--- COLORSCHEME & FONTS
+-------------------------
+-- COLORSCHEME & FONTS --
+-------------------------
+
 if vim.fn.has('termguicolors') then
   vim.opt.termguicolors = true
 end
 
 vim.opt.guifont = 'FiraCode NF:h16'
 
--- INTERFACE & SEARCH
+------------------------
+-- INTERFACE & SEARCH --
+------------------------
+
 vim.opt.background = 'dark'
 vim.opt.autoindent = true
 vim.opt.number = true
@@ -21,7 +27,10 @@ vim.opt.mouse = 'a'
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.ignorecase = true
 
--- VIM FOLDING
+-----------------
+-- VIM FOLDING --
+-----------------
+
 vim.opt.foldenable = true
 vim.opt.foldlevelstart = 10
 vim.opt.foldnestmax = 10
@@ -29,13 +38,19 @@ vim.opt.foldmethod = 'indent'
 vim.wo.foldmethod = 'expr'
 vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
 
--- STATUS LINE
+-----------------
+-- STATUS LINE --
+-----------------
+
 vim.opt.laststatus = 3
 
 -- Enable hidden buffers (do not need to save when switching from unsaved files)
 vim.opt.hidden = true
 
--- TABS
+----------
+-- TABS --
+----------
+
 if vim.fn.has('vim_starting') then
   vim.opt.expandtab = true
   vim.opt.tabstop = 4
@@ -47,7 +62,10 @@ if vim.fn.has('vim_starting') then
   vim.opt.updatetime = 100
 end
 
--- LSP COMPLETION
+--------------------
+-- LSP COMPLETION --
+--------------------
+
 vim.opt.completeopt = {'menuone', 'noselect', 'noinsert'}
 vim.opt.shortmess = vim.opt.shortmess + { c = true}
 vim.api.nvim_set_option('updatetime', 350)
@@ -80,7 +98,18 @@ vim.diagnostic.config({
     },
 })
 
+----------------
+-- Vimspector --
+----------------
+
 vim.cmd([[
   set signcolumn=yes
   autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 ]])
+
+vim.cmd([[
+let g:vimspector_sidebar_width = 85
+let g:vimspector_bottombar_height = 15
+let g:vimspector_terminal_maxwidth = 70
+]])
+

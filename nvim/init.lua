@@ -1,8 +1,6 @@
--- My .vimrc
-
--- vim.api.nvim_command([[
---   source ~/dotfiles/coc.nvim
--- ]])
+----------------------
+-- Nahua's Init.Lua --
+----------------------
 
 require('opts')
 require('keys')

@@ -44,6 +44,7 @@ return require('packer').startup(function(use)
   use 'numToStr/FTerm.nvim';
   use 'plasticboy/vim-markdown';
   use 'preservim/tagbar';
+  use 'puremourning/vimspector';
   use 'rking/ag.vim';
   use 'tpope/vim-commentary';
   use 'tpope/vim-fugitive';
