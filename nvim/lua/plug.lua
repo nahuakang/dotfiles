@@ -50,6 +50,7 @@ return require('packer').startup(function(use)
   use 'tpope/vim-fugitive';
   use 'vim-airline/vim-airline';
   use 'Yggdroot/indentLine';
+  use 'ggandor/leap.nvim';
 
   -- Language Server Related
   use 'williamboman/mason.nvim';

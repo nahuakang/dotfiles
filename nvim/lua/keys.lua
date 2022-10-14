@@ -9,6 +9,8 @@ vim.keymap.set('n', '<Leader>sv', ':source $MYVIMRC<CR>') -- Source $MYVIMRC
 vim.keymap.set('n', '<Leader>s', ':mksession<CR>')        -- Saving current session
 vim.keymap.set('n', '<Leader>nt', ':NvimTreeToggle<CR>')  -- Toggle NvimTree
 vim.keymap.set('n', '<Leader>c', ':noh<CR>')              -- Clear search highlighting
+-- Open up tagbar with Fn + F8 key
+vim.keymap.set('n', '<Leader>tb', ':TagbarToggle<CR>')
 
 vim.g.mapleader = " "                                     -- Set MAPLEADER to <Space>
 vim.keymap.set('n', '<Leader><Space>', ':Files<CR>')      -- Open files searcher
@@ -32,8 +34,6 @@ vim.keymap.set('n', '<C-p>', ':bprevious<CR>')
 -- USE gt and gT instead
 -- vim.keymap.set('n', '<C-j>', ':tabprevious<CR>')
 -- vim.keymap.set('n', '<C-k>', ':tabnext<CR>')
--- Open up tagbar with Fn + F8 key
-vim.keymap.set('n', 'F8', ':TagbarToggle<CR>')
 -- <Space> to open/close folds
 vim.keymap.set('n', '<Space>', 'za')
 -- Escape from insert mode
@@ -85,4 +85,7 @@ vim.api.nvim_create_user_command('Hterm', ':sp term://zsh', {})
 -- FTerm Settings
 vim.keymap.set('n', '<C-e>', '<CMD>lua require("FTerm").toggle()<CR>')
 vim.keymap.set('t', '<C-e>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
+
+-- TagBar
+vim.g.Tlist_Ctags_Cmd = "/usr/bin/ctags"
 

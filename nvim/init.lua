@@ -69,6 +69,12 @@ require("bufferline").setup{}
 
 vim.cmd [[cnoreabbrev rg Rg]]
 
+---------------
+-- Leap.Nvim --
+---------------
+
+require('leap').add_default_mappings()
+
 -------------------------------
 -- LSP Server Configurations --
 -------------------------------
