@@ -72,10 +72,11 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
+    sudo
+    zsh-history-substring-search
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 )
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -99,6 +100,13 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
+
+# OpenTalk VPN
+alias vpnup='nmcli c up L105-UDP-nkang.opentalk.eu-external'
+alias vpndown='nmcli c down L105-UDP-nkang.opentalk.eu-external'
+
+# Docker
+alias dc='docker compose'
 
 # pbcopy/pbpaste config
 alias pbcopy='xclip -selection clipboard'
