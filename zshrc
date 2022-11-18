@@ -131,3 +131,6 @@ if [ "$(command -v bat)" ]; then
   alias cat='bat -pp --theme="Nord"'
 fi
 
+# FZF
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+
