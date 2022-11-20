@@ -40,12 +40,14 @@ return require('packer').startup(function(use)
   use 'lifepillar/vim-gruvbox8';
   use 'mhinz/vim-signify';
   use 'mhinz/vim-startify';
+  use 'morhetz/gruvbox';
   use 'nvim-treesitter/nvim-treesitter';
   use 'numToStr/FTerm.nvim';
   use 'plasticboy/vim-markdown';
   use 'preservim/tagbar';
   use 'puremourning/vimspector';
   use 'rking/ag.vim';
+  use 'sainnhe/gruvbox-material';
   use 'tpope/vim-commentary';
   use 'tpope/vim-fugitive';
   use 'vim-airline/vim-airline';

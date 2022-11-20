@@ -138,3 +138,8 @@ source /usr/share/doc/fzf/examples/key-bindings.zsh
 # Starship
 eval "$(starship init zsh)"
 
+# Gruvbox Theme: https://github.com/metalelf0/gnome-terminal-colors
+eval `dircolors $HOME/.dir_colors/`
+
+# Created by `pipx` on 2022-11-20 19:53:36
+export PATH="$PATH:/home/nahua/.local/bin"

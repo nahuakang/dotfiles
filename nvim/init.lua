@@ -25,7 +25,9 @@ require('mason-lspconfig').setup()
 -- COLORSCHEME --
 -----------------
 
-vim.cmd [[colorscheme nord]]
+-- vim.cmd [[colorscheme gruvbox-material]]
+-- vim.cmd [[colorscheme nord]]
+vim.cmd [[colorscheme gruvbox]]
 vim.cmd([[
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 ]])
