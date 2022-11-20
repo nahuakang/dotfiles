@@ -1,195 +1,144 @@
-command_timeout = 1000
+[character]
+success_symbol = "[>](bold green)"
+error_symbol = "[x](bold red)"
+vimcmd_symbol = "[<](bold green)"
+
+[git_commit]
+tag_symbol = " tag "
+
+[git_status]
+ahead = ">"
+behind = "<"
+diverged = "<>"
+renamed = "r"
+deleted = "x"
 
 [aws]
-symbol = "  "
+symbol = "aws "
 
-[buf]
-symbol = " "
+[bun]
+symbol = "bun "
 
 [c]
-symbol = " "
+symbol = "C "
+
+[cobol]
+symbol = "cobol "
 
 [conda]
-symbol = " "
+symbol = "conda "
+
+[crystal]
+symbol = "cr "
+
+[cmake]
+symbol = "cmake "
+
+[daml]
+symbol = "daml "
 
 [dart]
-symbol = " "
+symbol = "dart "
+
+[deno]
+symbol = "deno "
+
+[dotnet]
+symbol = ".NET "
 
 [directory]
-read_only = " "
+read_only = " ro"
 
 [docker_context]
-symbol = " "
+symbol = "docker "
 
 [elixir]
-symbol = " "
+symbol = "exs "
 
 [elm]
-symbol = " "
+symbol = "elm "
 
 [git_branch]
-symbol = " "
+symbol = "git "
 
 [golang]
-symbol = " "
-
-[haskell]
-symbol = " "
+symbol = "go "
 
 [hg_branch]
-symbol = " "
+symbol = "hg "
 
 [java]
-symbol = " "
+symbol = "java "
 
 [julia]
-symbol = " "
+symbol = "jl "
 
-[memory_usage]
-symbol = " "
+[kotlin]
+symbol = "kt "
 
-[nim]
-symbol = " "
-
-[nix_shell]
-symbol = " "
+[lua]
+symbol = "lua "
 
 [nodejs]
-symbol = " "
+symbol = "nodejs "
+
+[memory_usage]
+symbol = "memory "
+
+[meson]
+symbol = "meson "
+
+[nim]
+symbol = "nim "
+
+[nix_shell]
+symbol = "nix "
+
+[ocaml]
+symbol = "ml "
 
 [package]
-symbol = " "
+symbol = "pkg "
+
+[perl]
+symbol = "pl "
+
+[php]
+symbol = "php "
+
+[pulumi]
+symbol = "pulumi "
+
+[purescript]
+symbol = "purs "
 
 [python]
-symbol = " "
+symbol = "py "
 
-[spack]
-symbol = "🅢 "
+[raku]
+symbol = "raku "
 
 [ruby]
-symbol = " "
+symbol = "rb "
 
 [rust]
-symbol = " "
+symbol = "rs "
 
-# # Get editor completions based on the config schema
-# "$schema" = 'https://starship.rs/config-schema.json'
+[scala]
+symbol = "scala "
 
-# format = """
-# [](#8FBCBB)\
-# $username\
-# $directory\
-# $git_branch\
-# $git_status\
-# $c\
-# $golang\
-# $haskell\
-# $julia\
-# $nodejs\
-# $nim\
-# $python\
-# $rust\
-# $time
-# $character
-# """
+[spack]
+symbol = "spack "
 
-# [username]
-# show_always = true
-# style_user = "fg:#2E3440 bg:#8FBCBB"
-# style_root = "fg:#2E3440 bg:#8FBCBB"
-# format = '[$user ]($style)'
+[sudo]
+symbol = "sudo "
 
-# [directory]
-# read_only = " "
-# style = "fg:#ECEFF4 bg:#3B4252"
-# format = "[ $path ]($style)"
-# home_symbol = "ﮟ ~"
-# truncation_length = 3
-# truncate_to_repo = false
-# truncation_symbol = "…/"
-# fish_style_pwd_dir_length = 1
+[swift]
+symbol = "swift "
 
-# [directory.substitutions]
-# "Documents" = " "
-# "Downloads" = " "
-# "Music" = " "
-# "Pictures" = " "
-# "oss" = " "
-# "projects" = " "
+[terraform]
+symbol = "terraform "
 
-# [fill]
-# symbol = "•"
-# style = "dimmed #D8DEE9"
+[zig]
+symbol = "zig "
 
-# [character]
-# success_symbol = " [λ](bold green)"
-# error_symbol = " [λ](bold red)"
-
-# [aws]
-# # symbol = " "
-# format = 'on [$symbol($profile )(\($region\) )]($style)'
-# style = "bold blue"
-# symbol = "🅰 "
-
-# [c]
-# symbol = " "
-# style = "bg:#5E81AC"
-# format = '[[ $symbol ($version) ](bg:#5E81AC)]($style)'
-
-# [conda]
-# symbol = " "
-
-# [docker_context]
-# symbol = " "
-# style = "bg:#06969A"
-# format = '[[ $symbol $context ](bg:#06969A)]($style) $path'
-
-# [git_branch]
-# symbol = ""
-# style = "fg:#ECEFF4 bg:#4C566A"
-# format = '[[ $symbol $branch ](fg:#ECEFF4 bg:#4C566A)]($style)'
-
-# [git_status]
-# style = "fg:#ECEFF4 bg:#4C566A"
-# format = '[[($all_status$ahead_behind )](fg:#ECEFF4 bg:#4C566A)]($style)'
-
-# [golang]
-# symbol = " "
-# style = "bg:#5E81AC"
-# format = '[[ $symbol ($version) ](bg:#5E81AC)]($style)'
-
-# [haskell]
-# symbol = " "
-# style = "bg:#5E81AC"
-# format = '[[ $symbol ($version) ](bg:#5E81AC)]($style)'
-
-# [julia]
-# symbol = " "
-# style = "bg:#5E81AC"
-# format = '[[ $symbol ($version) ](bg:#5E81AC)]($style)'
-
-# [nodejs]
-# symbol = ""
-# style = "bg:#5E81AC"
-# format = '[[ $symbol ($version) ](bg:#5E81AC)]($style)'
-
-# [nim]
-# symbol = " "
-# style = "bg:#5E81AC"
-# format = '[[ $symbol ($version) ](bg:#5E81AC)]($style)'
-
-# [python]
-# symbol = " "
-# style = "bg:#5E81AC"
-# format = '[[ $symbol ($version) ](bg:#5E81AC)]($style)'
-
-# [rust]
-# symbol = ""
-# style = "bg:#5E81AC"
-# format = '[[ $symbol ($version) ](bg:#5E81AC)]($style)'
-
-# [time]
-# disabled = false
-# time_format = "%R" # Hour:Minute Format
-# style = "fg:#ECEFF4 bg:#3B4252"
-# format = '[[  $time ](bg:#3B4252)]($style)'

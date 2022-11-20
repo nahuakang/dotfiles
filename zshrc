@@ -135,3 +135,6 @@ fi
 # FZF
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 
+# Starship
+eval "$(starship init zsh)"
+
