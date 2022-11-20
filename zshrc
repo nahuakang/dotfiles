@@ -104,6 +104,7 @@ source $ZSH/oh-my-zsh.sh
 # OpenTalk VPN
 alias vpnup='nmcli c up L105-UDP-nkang.opentalk.eu-external'
 alias vpndown='nmcli c down L105-UDP-nkang.opentalk.eu-external'
+alias autosig='f() { /usr/lib/gnupg2/gpg-preset-passphrase -c $1 <<< $2 };f'
 
 # Docker
 alias dc='docker compose'
