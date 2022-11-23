@@ -129,7 +129,7 @@ fi
 # bat config
 if [ "$(command -v bat)" ]; then
   unalias -m 'cat'
-  alias cat='bat -pp --theme="Gruvbox"'
+  alias cat='bat -pp --theme="gruvbox"'
 fi
 
 # FZF

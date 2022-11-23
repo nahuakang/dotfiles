@@ -66,6 +66,9 @@ vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } e
 -------------------------------
 
 vim.cmd([[
+nmap <F1> <cmd>call vimspector#ToggleBreakpoint()<cr>
+nmap <F2> <cmd>call vimspector#AddWatch()<cr>
+nmap <F3> <cmd>call vimspector#Evaluate()<cr>
 nmap <F9> <cmd>call vimspector#Launch()<cr>
 nmap <F5> <cmd>call vimspector#StepOver()<cr>
 nmap <F8> <cmd>call vimspector#Reset()<cr>
@@ -73,9 +76,6 @@ nmap <F11> <cmd>call vimspector#StepOver()<cr>")
 nmap <F12> <cmd>call vimspector#StepOut()<cr>")
 nmap <F10> <cmd>call vimspector#StepInto()<cr>")
 ]])
-vim.keymap.set('n', "Gb", ":call vimspector#ToggleBreakpoint()<cr>")
-vim.keymap.set('n', "Gw", ":call vimspector#AddWatch()<cr>")
-vim.keymap.set('n', "Ge", ":call vimspector#Evaluate()<cr>")
 
 -- TERMINAL COMMANDS
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
