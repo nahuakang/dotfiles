@@ -143,3 +143,8 @@ eval `dircolors $HOME/.dir_colors/`
 
 # Created by `pipx` on 2022-11-20 19:53:36
 export PATH="$PATH:/home/nahua/.local/bin"
+
+# NVM Setup
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
