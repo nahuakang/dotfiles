@@ -9,7 +9,7 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
-  - ~/.config/alacritty/themes/nord.yml
+  - ~/.config/alacritty/themes/gruvbox_material.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -114,15 +114,15 @@ window:
 # Font configuration
 font:
   normal:
-    family: FiraCode NF #MesloLGS NF
+    family: FiraCode Nerd Font
     style: Regular
   bold:
-    family: FiraCode NF #MesloLGS NF
+    family: FiraCode Nerd Font
     style: Bold
   italic:
-    family: FiraCode NF #MesloLGS NF
+    family: FiraCode Nerd Font
     style: Italic
-  size: 16.0
+  size: 14.0
 #font:
 # Normal (roman) font face
 #normal:
