@@ -5,7 +5,7 @@
 local wezterm = require 'wezterm'
 
 return {
-    color_scheme = "Gruvbox Dark",
+    color_scheme = "Gruvbox dark, medium (base16)",
 
     font = wezterm.font_with_fallback{
         'Comic Code Ligatures',
