@@ -32,6 +32,14 @@ vim.cmd([[
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 ]])
 
+-------------
+-- LuaLine --
+-------------
+
+require('lualine').setup {
+  options = { section_separators = '', component_separators = {left = '', right = '|'} }
+}
+
 ----------------
 -- TreeSitter --
 ----------------

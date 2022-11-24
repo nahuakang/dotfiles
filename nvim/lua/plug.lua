@@ -50,7 +50,7 @@ return require('packer').startup(function(use)
   use 'sainnhe/gruvbox-material';
   use 'tpope/vim-commentary';
   use 'tpope/vim-fugitive';
-  use 'vim-airline/vim-airline';
+  use {'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}}
   use 'Yggdroot/indentLine';
   use 'ggandor/leap.nvim';
 
