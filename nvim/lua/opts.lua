@@ -3,7 +3,7 @@
 -------------------------
 
 if vim.fn.has('termguicolors') then
-  vim.opt.termguicolors = true
+    vim.opt.termguicolors = true
 end
 
 vim.opt.guifont = 'FiraCode NF:h16'
@@ -52,14 +52,14 @@ vim.opt.hidden = true
 ----------
 
 if vim.fn.has('vim_starting') then
-  vim.opt.expandtab = true
-  vim.opt.tabstop = 4
-  vim.opt.shiftwidth = 4
-  vim.opt.softtabstop = 4
-  vim.opt.wrap = true
-  vim.opt.linebreak = true
-  -- vim-signify default updatetime 4000ms is not good for async update
-  vim.opt.updatetime = 100
+    vim.opt.expandtab = true
+    vim.opt.tabstop = 4
+    vim.opt.shiftwidth = 4
+    vim.opt.softtabstop = 4
+    vim.opt.wrap = true
+    vim.opt.linebreak = true
+    -- vim-signify default updatetime 4000ms is not good for async update
+    vim.opt.updatetime = 100
 end
 
 --------------------
@@ -72,11 +72,11 @@ vim.api.nvim_set_option('updatetime', 350)
 
 -- LSP Diagnostics Options Setup 
 local sign = function(opts)
-  vim.fn.sign_define(opts.name, {
-    texthl = opts.name,
-    text = opts.text,
-    numhl = ''
-  })
+    vim.fn.sign_define(opts.name, {
+        texthl = opts.name,
+        text = opts.text,
+        numhl = ''
+    })
 end
 
 sign({name = 'DiagnosticSignError', text = ''})
@@ -103,13 +103,13 @@ vim.diagnostic.config({
 ----------------
 
 vim.cmd([[
-  set signcolumn=yes
-  autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
+    set signcolumn=yes
+    autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 ]])
 
 vim.cmd([[
-let g:vimspector_sidebar_width = 85
-let g:vimspector_bottombar_height = 15
-let g:vimspector_terminal_maxwidth = 70
+    let g:vimspector_sidebar_width = 85
+    let g:vimspector_bottombar_height = 15
+    let g:vimspector_terminal_maxwidth = 70
 ]])
 
