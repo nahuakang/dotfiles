@@ -25,7 +25,7 @@ return require('packer').startup(function(use)
     --Editor Plugins
     use 'arcticicestudio/nord-vim';
     use 'airblade/vim-rooter';
-    use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'kyazdani42/nvim-web-devicons'}
+    use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
     use 'bfrg/vim-cpp-modern';
     use 'cespare/vim-toml';
     use 'dense-analysis/ale';
@@ -59,6 +59,7 @@ return require('packer').startup(function(use)
     use 'williamboman/mason-lspconfig.nvim'
     use 'neovim/nvim-lspconfig';
     use 'simrat39/rust-tools.nvim';
+    use 'ziglang/zig.vim';
 
     -- Completion- & Snippet-Plugins
     use 'hrsh7th/nvim-cmp';
