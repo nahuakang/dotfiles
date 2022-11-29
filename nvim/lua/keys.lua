@@ -32,9 +32,11 @@ vim.keymap.set('n', '<C-n>', ':bnext<CR>')
 vim.keymap.set('n', '<C-p>', ':bprevious<CR>')
 -- Toggle between tabs
 -- USE gt and gT instead
--- vim.keymap.set('n', '<C-j>', ':tabprevious<CR>')
--- vim.keymap.set('n', '<C-k>', ':tabnext<CR>')
 -- <Space> to open/close folds
+vim.keymap.set('n', '<C-j>', '<C-w><C-j>')
+vim.keymap.set('n', '<C-k>', '<C-w><C-k>')
+vim.keymap.set('n', '<C-l>', '<C-w><C-l>')
+vim.keymap.set('n', '<C-h>', '<C-w><C-h>')
 vim.keymap.set('n', '<Space>', 'za')
 -- Escape from insert mode
 vim.keymap.set('i', 'jk', '<Esc>')
@@ -49,7 +51,7 @@ vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
 vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
-vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
+vim.keymap.set('n', '<sk>', vim.lsp.buf.signature_help, bufopts)
 vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts)
 vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
 vim.keymap.set('n', '<space>wl', function()
