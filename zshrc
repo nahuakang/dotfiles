@@ -101,6 +101,9 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+# WezTerm (via Flatpak)
+alias wezterm='flatpak run org.wezfurlong.wezterm'
+
 # OpenTalk VPN
 alias vpnup='nmcli c up L105-UDP-nkang.opentalk.eu-external'
 alias vpndown='nmcli c down L105-UDP-nkang.opentalk.eu-external'
