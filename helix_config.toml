@@ -1,5 +1,7 @@
 # theme = "nord"
 theme = "gruvbox"
+# theme = "catppuccin_mocha"
+# theme = "base16_default_dark"
 
 [editor]
 line-number = "absolute"
@@ -12,6 +14,11 @@ select = "underline"
 
 [editor.file-picker]
 hidden = false
+
+[editor.indent-guides]
+render = true
+character = "⸽" # Some characters that work well: "▏", "╎", "┆", "┊", "⸽"
+skip-levels = 1
 
 # At most one section each of 'keys.normal', 'keys.insert' and 'keys.select'
 [keys.normal]
