@@ -101,7 +101,9 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-# WezTerm (via Flatpak)
+# Flatpak
+# alias meld='flatpak run org.gnome.meld'
+alias obsidian='flatpak run md.obsidian.Obsidian'
 alias wezterm='flatpak run org.wezfurlong.wezterm'
 
 # OpenTalk VPN
@@ -146,6 +148,9 @@ eval `dircolors $HOME/.dir_colors/`
 
 # Created by `pipx` on 2022-11-20 19:53:36
 export PATH="$PATH:/home/nahua/.local/bin"
+
+# Add Nimble (via choosenim installation)
+export PATH=/home/nahua/.nimble/bin:$PATH
 
 # NVM Setup
 export NVM_DIR="$HOME/.nvm"
