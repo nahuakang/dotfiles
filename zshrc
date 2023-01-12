@@ -152,6 +152,9 @@ export PATH="$PATH:/home/nahua/.local/bin"
 # Add Nimble (via choosenim installation)
 export PATH=/home/nahua/.nimble/bin:$PATH
 
+# Make PATH unique
+typeset -U path path
+
 # NVM Setup
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
