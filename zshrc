@@ -105,11 +105,12 @@ source $ZSH/oh-my-zsh.sh
 # alias meld='flatpak run org.gnome.meld'
 alias obsidian='flatpak run md.obsidian.Obsidian'
 alias wezterm='flatpak run org.wezfurlong.wezterm'
+alias zola='flatpak run org.getzola.zola'
+alias logseq='flatpak run com.logseq.Logseq'
 
 # OpenTalk VPN
 alias vpnup='nmcli c up L105-UDP-nkang.opentalk.eu-external'
 alias vpndown='nmcli c down L105-UDP-nkang.opentalk.eu-external'
-alias autosig='f() { /usr/lib/gnupg2/gpg-preset-passphrase -c $1 <<< $2 };f'
 
 # Docker
 alias dc='docker compose'
@@ -118,8 +119,11 @@ alias dc='docker compose'
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
-# alias to link nix package desktop icons
-alias nixicons='sudo ln -sf ~/.nix-profile/share/applications/* /usr/share/applications/'
+# XPLR Alias
+alias xx='xplr'
+
+# # alias to link nix package desktop icons
+# alias nixicons='sudo ln -sf ~/.nix-profile/share/applications/* /usr/share/applications/'
 
 # exa config
 if [ "$(command -v exa)" ]; then

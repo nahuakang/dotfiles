@@ -5,7 +5,9 @@
 local wezterm = require 'wezterm'
 
 return {
-    color_scheme = "Gruvbox dark, medium (base16)",
+    -- color_scheme = "Gruvbox dark, medium (base16)",
+    -- color_scheme = "nord",
+    color_scheme = "Catppuccin Mocha",
 
     font = wezterm.font_with_fallback {
         'Comic Code Ligatures',
@@ -42,7 +44,7 @@ return {
         { key = "9", mods = "ALT", action = wezterm.action { ActivateTab = 8 } },
     },
 
-    enable_scroll_bar = true,
+    enable_scroll_bar = false,
     scrollback_lines = 3500,
 
     warn_about_missing_glyphs = false,
