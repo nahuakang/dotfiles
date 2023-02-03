@@ -1,6 +1,6 @@
 # theme = "nord"
-theme = "gruvbox"
-# theme = "catppuccin_mocha"
+# theme = "gruvbox"
+theme = "catppuccin_mocha"
 # theme = "base16_default_dark"
 
 [editor]

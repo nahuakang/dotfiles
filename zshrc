@@ -153,9 +153,6 @@ eval `dircolors $HOME/.dir_colors/`
 # Created by `pipx` on 2022-11-20 19:53:36
 export PATH="$PATH:/home/nahua/.local/bin"
 
-# Add Nimble (via choosenim installation)
-export PATH=/home/nahua/.nimble/bin:$PATH
-
 # Make PATH unique
 typeset -U path path
 
